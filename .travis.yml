@@ -9,6 +9,7 @@ before_script:
 
 script:
     - ./gradlew clean build
+    - ./gradlew detektCheck
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
