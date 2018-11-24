@@ -9,7 +9,9 @@ matrix:
       sudo: required
       jdk: oraclejdk9
 
-script: ./gradlew clean build
+script:
+    chmod +x ./gradlew
+    ./gradlew clean build
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
