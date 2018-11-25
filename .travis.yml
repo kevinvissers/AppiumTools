@@ -4,7 +4,7 @@ jobs:
   include:
     - stage: "Build"
       name: "Build + Unit test"
-      script: ./gradlew clean build
+      script: ./gradlew clean build detektcheck
     - stage: "Detekt"
       name: "Run static analysis"
       script: ./gradlew detektcheck
