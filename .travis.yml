@@ -7,18 +7,19 @@ jobs:
       script: ./gradlew clean build
     - stage: "Detekt"
       name: "Run static analysis"
-      script: ./gradlew detektCheck
+      script: ./gradlew detektcheck
 
-install:
-    - echo "Travis branch is $TRAVIS_BRANCH"
+#install:
+#     - echo "Travis job id is $TRAVIS_JOB_ID"
 #    - chmod +x gradlew
 
 before_script:
+    - echo "Travis job id is $TRAVIS_JOB_ID"
     - chmod +x gradlew
 
 #script:
 #    - ./gradlew clean build
-#    - ./gradlew detektCheck
+#    - ./gradlew detektcheck
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
