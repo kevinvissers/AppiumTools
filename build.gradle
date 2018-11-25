@@ -36,4 +36,9 @@ compileTestKotlin {
 
 detekt {
     version = "1.0.0.RC8"
+    profile("main") {
+        input = "$projectDir/src"
+        config = "$projectDir/default-detekt-config.yml"
+        output = "${projectDir}/build/reports/detekt/"
+    }
 }
