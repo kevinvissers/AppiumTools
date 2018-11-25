@@ -4,7 +4,7 @@ plugins {
     id "io.gitlab.arturbosch.detekt" version "1.0.0.RC8"
 }
 
-group 'be.vike'
+group 'be.throughsmokeandtears.tech'
 version '0.1-SNAPSHOT'
 
 sourceCompatibility = 1.8

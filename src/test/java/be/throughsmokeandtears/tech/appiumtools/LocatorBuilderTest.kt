@@ -1,8 +1,7 @@
-package be.vike.appiumtools.xpathbuilder
+package be.throughsmokeandtears.tech.appiumtools
 
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
-import com.google.common.truth.Truth.assertWithMessage
 
 class LocatorBuilderTest {
 
