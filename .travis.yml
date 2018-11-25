@@ -9,9 +9,9 @@ jobs:
       name: "Run static analysis"
       script: ./gradlew detektcheck
 
-#install:
-#     - echo "Travis job id is $TRAVIS_JOB_ID"
-#    - chmod +x gradlew
+install:
+     - echo "Travis job id is $TRAVIS_JOB_ID"
+     - chmod +x gradlew
 
 before_script:
     - echo "Travis job id is $TRAVIS_JOB_ID"
