@@ -1,13 +1,13 @@
 language: java
 
-jobs:
-  include:
-    - stage: "Build"
-      name: "Build + Unit test"
-      script: ./gradlew clean build detektcheck
-    - stage: "Detekt"
-      name: "Run static analysis"
-      script: ./gradlew detektcheck
+#jobs:
+#  include:
+#    - stage: "Build"
+#      name: "Build + Unit test"
+#      script: ./gradlew clean build detektcheck
+#    - stage: "Detekt"
+#      name: "Run static analysis"
+#      script: ./gradlew detektcheck
 
 install:
      - echo "Travis job id is $TRAVIS_JOB_ID"
@@ -17,9 +17,8 @@ before_script:
     - echo "Travis job id is $TRAVIS_JOB_ID"
     - chmod +x gradlew
 
-#script:
-#    - ./gradlew clean build
-#    - ./gradlew detektcheck
+script:
+    - ./gradlew detektcheck
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
